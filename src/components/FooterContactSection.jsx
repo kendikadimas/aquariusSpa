@@ -18,20 +18,12 @@ export default function FooterContactSection({ onOpenBooking }) {
           
           {/* Column 1: Brand Info with logos.png Logo */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center">
               <img
                 src="/logos.png"
-                alt="Aquarius Spa Logo Icon"
-                className="h-14 w-14 object-contain shrink-0"
+                alt="Aquarius Spa Logo"
+                className="h-20 sm:h-24 w-auto object-contain shrink-0 filter brightness-110 drop-shadow-md"
               />
-              <div className="flex items-baseline gap-1">
-                <span className="font-serif font-bold text-lg sm:text-xl tracking-[0.18em] uppercase text-white">
-                  AQUARIUS
-                </span>
-                <span className="font-serif italic font-normal text-sm sm:text-base text-[#c49a6c]">
-                  Spa
-                </span>
-              </div>
             </div>
 
             <p className="text-xs text-[#c7b7aa] leading-relaxed font-light">

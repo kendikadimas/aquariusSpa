@@ -2,7 +2,7 @@ import './globals.css';
 
 export const metadata = {
   title: 'Aquarius Massage Home Spa | Layanan Pijat Panggilan Relaksasi',
-  description: 'Layanan pijat profesional panggilan ke lokasi Anda (Rumah, Hotel, Apartemen) di Jakarta, Tangerang, & Bekasi. Traditional Massage, Relaxing Massage, Aromatherapy Spa. Hubungi 0819-9316-5133.',
+  description: 'Layanan pijat profesional panggilan ke lokasi Anda (Rumah, Hotel, Apartemen) di Jakarta, Tangerang, & Bekasi. Traditional Massage, Relaxing Massage, Aromatherapy Spa. Hubungi 0813-1188-515.',
   keywords: ['aquarius spa', 'home spa jakarta', 'pijat panggilan', 'massage home spa', 'traditional massage', 'aromatherapy massage', 'pijat tgr beka'],
   openGraph: {
     title: 'Aquarius Massage Home Spa - Relax Your Body, Refresh Your Mind',

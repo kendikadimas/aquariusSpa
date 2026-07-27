@@ -64,11 +64,19 @@ export default function ServicesSection({ onOpenBooking }) {
                   <h3 className="font-serif text-lg font-semibold text-[#2b1c15] tracking-wide mb-0.5 group-hover:text-[#5a3d30] transition-colors">
                     {service.name}
                   </h3>
-                  <p className="text-xs text-[#5a3d30] font-medium mb-3">{service.subtitle}</p>
+                  <p className="text-xs text-[#5a3d30] font-medium">{service.subtitle}</p>
+                  <p className="text-[11px] text-[#8c664d] italic font-normal mb-3">{service.subtitleEn}</p>
 
-                  <p className="text-xs text-[#5c4336] leading-relaxed font-light mb-6">
-                    {service.description}
-                  </p>
+                  <div className="space-y-2 mb-6">
+                    {/* Indonesian Description */}
+                    <p className="text-xs text-[#5c4336] leading-relaxed font-light">
+                      {service.description}
+                    </p>
+                    {/* English Description */}
+                    <p className="text-[11px] text-[#8c664d] leading-relaxed font-light italic pt-2 border-t border-[#e8ded3]/70">
+                      {service.descriptionEn}
+                    </p>
+                  </div>
                 </div>
 
                 <div className="space-y-4">
@@ -113,6 +121,9 @@ export default function ServicesSection({ onOpenBooking }) {
               <h3 className="text-xl font-serif font-medium text-[#2b1c15]">{EXTENDED_OPTION.title}</h3>
               <p className="text-xs text-[#5c4336] mt-0.5 max-w-xl font-light">
                 {EXTENDED_OPTION.description}
+              </p>
+              <p className="text-[11px] text-[#8c664d] mt-1 max-w-xl font-light italic">
+                {EXTENDED_OPTION.descriptionEn}
               </p>
             </div>
           </div>

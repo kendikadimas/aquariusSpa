@@ -3,8 +3,8 @@ export const SPA_CONFIG = {
   shortName: "Aquarius Spa",
   tagline: "Relax Your Body, Refresh Your Mind",
   subTagline: "Layanan pijat profesional yang datang langsung ke lokasi Anda untuk kenyamanan & relaksasi maksimal.",
-  phone: "0819-9316-5133",
-  whatsappNumber: "6281993165133",
+  phone: "0813-1188-515",
+  whatsappNumber: "628131188515",
   operatingHours: "Setiap Hari | 10.00 - 23.00 WIB",
   serviceAreas: ["Jakarta", "Tangerang", "Bekasi", "Depok", "BSD & Serpong"],
 };
@@ -14,7 +14,9 @@ export const SERVICES = [
     id: "traditional",
     name: "TRADITIONAL MASSAGE",
     subtitle: "Pijat Tradisional Khas Nusantara",
+    subtitleEn: "Traditional Archipelago Massage",
     description: "Pijat tradisional untuk meredakan pegal, melancarkan peredaran darah, mengatasi otot kaku, dan mengembalikan kebugaran tubuh secara menyeluruh.",
+    descriptionEn: "Traditional massage to relieve body aches, improve blood circulation, soothe stiff muscles, and restore overall body vitality.",
     badge: "Paling Populer",
     icon: "Flower2",
     image: "/images/traditional_massage_hands.png",
@@ -27,7 +29,9 @@ export const SERVICES = [
     id: "relaxing",
     name: "RELAXING MASSAGE",
     subtitle: "Pijat Sentuhan Soft & Relaksasi",
+    subtitleEn: "Soft Touch & Gentle Relaxation Massage",
     description: "Teknik pijat relaksasi dengan sentuhan lembut untuk mengurangi stres, ketegangan pikiran, melepaskan penat harian, dan memberikan rasa nyaman mendalam.",
+    descriptionEn: "Gentle relaxation massage techniques to reduce stress, relieve mental fatigue, soothe daily tiredness, and bring deep comfort.",
     badge: "Best Seller",
     icon: "Sparkles",
     image: "/images/hero_sanctuary.png",
@@ -40,7 +44,9 @@ export const SERVICES = [
     id: "aromatherapy",
     name: "AROMATHERAPY MASSAGE",
     subtitle: "Pijat Minyak Aromaterapi Esensial",
+    subtitleEn: "Essential Aromatherapy Oil Massage",
     description: "Pijat dengan minyak aromaterapi pilihan yang memberikan efek relaksasi lebih mendalam, menutrisi kulit, serta menyegarkan aroma tubuh Anda.",
+    descriptionEn: "Massage using curated essential oils that provide deeper relaxation, nourish the skin, and refresh your senses.",
     badge: "Favorit Pelanggan",
     icon: "Flame",
     image: "/images/aromatherapy_oil_pouring.png",
@@ -53,7 +59,9 @@ export const SERVICES = [
     id: "reflexology",
     name: "REFLEXOLOGY & BODY SPA",
     subtitle: "Refleksi Titik Syaraf & Relaksasi Segar",
+    subtitleEn: "Reflexology Pressure Points & Body Refreshment",
     description: "Perpaduan pijat titik syaraf refleksi dan baluran scrub aromatik untuk melancarkan sirkulasi energi vital serta memanjakan otot lelah Anda.",
+    descriptionEn: "A blend of reflexology pressure point massage and aromatic scrub to stimulate vital energy flow and soothe tired muscles.",
     badge: "Rekomendasi",
     icon: "HeartPulse",
     image: "/images/hot_stone_reflexology.png",
@@ -70,7 +78,8 @@ export const EXTENDED_OPTION = {
   duration: "+30 MENIT",
   price: "Rp100.000",
   rawPrice: 100000,
-  description: "Dapatkan tambahan durasi pijat 30 menit ekstra untuk relaksasi yang lebih optimal di seluruh bagian tubuh Anda."
+  description: "Dapatkan tambahan durasi pijat 30 menit ekstra untuk relaksasi yang lebih optimal di seluruh bagian tubuh Anda.",
+  descriptionEn: "Get an additional 30 minutes of massage time for optimal full-body relaxation."
 };
 
 export const FEATURES = [
