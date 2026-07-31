@@ -5,7 +5,7 @@ export const SPA_CONFIG = {
   subTagline: "Layanan pijat profesional yang datang langsung ke lokasi Anda untuk kenyamanan & relaksasi maksimal.",
   phone: "0813-1188-515",
   whatsappNumber: "628131188515",
-  operatingHours: "Setiap Hari | 10.00 - 23.00 WIB",
+  operatingHours: "Setiap Hari | 10.00 - 00.00 WIB",
   serviceAreas: ["Jakarta", "Tangerang", "Bekasi", "Depok", "BSD & Serpong"],
 };
 
@@ -18,6 +18,7 @@ export const SERVICES = [
     description: "Pijat tradisional untuk meredakan pegal, melancarkan peredaran darah, mengatasi otot kaku, dan mengembalikan kebugaran tubuh secara menyeluruh.",
     descriptionEn: "Traditional massage to relieve body aches, improve blood circulation, soothe stiff muscles, and restore overall body vitality.",
     badge: "Paling Populer",
+    badgeEn: "Most Popular",
     icon: "Flower2",
     image: "/images/traditional_massage_hands.png",
     prices: [
@@ -33,6 +34,7 @@ export const SERVICES = [
     description: "Teknik pijat relaksasi dengan sentuhan lembut untuk mengurangi stres, ketegangan pikiran, melepaskan penat harian, dan memberikan rasa nyaman mendalam.",
     descriptionEn: "Gentle relaxation massage techniques to reduce stress, relieve mental fatigue, soothe daily tiredness, and bring deep comfort.",
     badge: "Best Seller",
+    badgeEn: "Best Seller",
     icon: "Sparkles",
     image: "/images/hero_sanctuary.png",
     prices: [
@@ -48,6 +50,7 @@ export const SERVICES = [
     description: "Pijat dengan minyak aromaterapi pilihan yang memberikan efek relaksasi lebih mendalam, menutrisi kulit, serta menyegarkan aroma tubuh Anda.",
     descriptionEn: "Massage using curated essential oils that provide deeper relaxation, nourish the skin, and refresh your senses.",
     badge: "Favorit Pelanggan",
+    badgeEn: "Customer Favorite",
     icon: "Flame",
     image: "/images/aromatherapy_oil_pouring.png",
     prices: [
@@ -63,8 +66,9 @@ export const SERVICES = [
     description: "Perpaduan pijat titik syaraf refleksi dan baluran scrub aromatik untuk melancarkan sirkulasi energi vital serta memanjakan otot lelah Anda.",
     descriptionEn: "A blend of reflexology pressure point massage and aromatic scrub to stimulate vital energy flow and soothe tired muscles.",
     badge: "Rekomendasi",
+    badgeEn: "Recommended",
     icon: "HeartPulse",
-    image: "/images/hot_stone_reflexology.png",
+    image: "/images/reflexology_body_spa.png",
     prices: [
       { duration: "90 MENIT", price: "Rp300.000", rawPrice: 300000, value: "90m" },
       { duration: "120 MENIT", price: "Rp400.000", rawPrice: 400000, value: "120m" }
@@ -85,22 +89,30 @@ export const EXTENDED_OPTION = {
 export const FEATURES = [
   {
     title: "TERAPIS BERPENGALAMAN",
+    titleEn: "EXPERIENCED THERAPISTS",
     description: "Terapis wanita profesional, ramah, terlatih, dan berpengalaman di bidangnya.",
+    descriptionEn: "Professional, friendly, well-trained, and experienced female therapists.",
     icon: "UserCheck"
   },
   {
     title: "PRIVASI TERJAMIN",
+    titleEn: "GUARANTEED PRIVACY",
     description: "Kenyamanan, kebersihan, dan privasi Anda adalah prioritas utama kami.",
+    descriptionEn: "Your comfort, hygiene, and privacy are our top priority.",
     icon: "ShieldCheck"
   },
   {
     title: "LAYANAN PANGGILAN LOKASI",
+    titleEn: "ON-DEMAND LOCATION SERVICE",
     description: "Terapis siap datang langsung ke rumah, hotel, maupun apartemen Anda.",
+    descriptionEn: "Therapists ready to visit your home, hotel, or apartment directly.",
     icon: "MapPin"
   },
   {
     title: "PELAYANAN TERBAIK",
+    titleEn: "EXCELLENT SERVICE",
     description: "Kepuasan Anda dan kesegaran tubuh Anda adalah komitmen layanan kami.",
+    descriptionEn: "Your satisfaction and body rejuvenation are our service commitment.",
     icon: "ThumbsUp"
   }
 ];
@@ -109,22 +121,30 @@ export const STEPS = [
   {
     step: "01",
     title: "PILIH LAYANAN",
-    description: "Pilih paket pijat (Traditional, Relaxing, atau Aromatherapy) & durasi pilihan Anda (90m / 120m)."
+    titleEn: "SELECT SERVICE",
+    description: "Pilih paket pijat (Traditional, Relaxing, atau Aromatherapy) & durasi pilihan Anda (90m / 120m).",
+    descriptionEn: "Select your massage package & preferred duration (90m / 120m)."
   },
   {
     step: "02",
     title: "HUBUNGI WHATSAPP",
-    description: "Klik tombol WA untuk terhubung otomatis dengan Admin Aquarius Spa."
+    titleEn: "CONTACT VIA WHATSAPP",
+    description: "Klik tombol WA untuk terhubung otomatis dengan Admin Aquarius Spa.",
+    descriptionEn: "Click the WA button to connect directly with Aquarius Spa Admin."
   },
   {
     step: "03",
     title: "KONFIRMASI LOKASI",
-    description: "Kirimkan alamat rumah, apartemen, atau hotel tempat Anda ingin mendapatkan layanan."
+    titleEn: "CONFIRM LOCATION",
+    description: "Kirimkan alamat rumah, apartemen, atau hotel tempat Anda ingin mendapatkan layanan.",
+    descriptionEn: "Send your home, apartment, or hotel address for therapist visit."
   },
   {
     step: "04",
     title: "TERAPIS TIBA & RELAKSASI",
-    description: "Terapis profesional tiba di lokasi Anda tepat waktu & nikmati momen relaksasi sempurna."
+    titleEn: "THERAPIST ARRIVES & RELAX",
+    description: "Terapis profesional tiba di lokasi Anda tepat waktu & nikmati momen relaksasi sempurna.",
+    descriptionEn: "Professional therapist arrives on time & enjoy your perfect relaxation session."
   }
 ];
 
@@ -137,9 +157,10 @@ export const GALLERY_ITEMS = [
   },
   {
     id: 2,
-    title: "Hot Stone Therapy & Candles",
-    category: "Specialized Therapy",
-    image: "/images/hot_stone_reflexology.png"
+    title: "Pijat Refleksi & Perawatan Kaki",
+    titleEn: "Reflexology & Foot Spa Care",
+    category: "Reflexology Therapy",
+    image: "/images/reflexology_body_spa.png"
   },
   {
     id: 3,
@@ -163,7 +184,7 @@ export const GALLERY_ITEMS = [
     id: 6,
     title: "Reflexology & Body Spa Care",
     category: "Relaksasi Total",
-    image: "/images/hot_stone_reflexology.png"
+    image: "/images/reflexology_body_spa.png"
   }
 ];
 

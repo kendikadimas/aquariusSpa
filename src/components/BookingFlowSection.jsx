@@ -10,13 +10,28 @@ export default function BookingFlowSection({ onOpenBooking }) {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
-          <span className="text-xs uppercase tracking-widest text-[#5a3d30] font-semibold">Proses Mudah</span>
-          <h2 className="text-3xl sm:text-4xl font-serif text-[#2b1c15] font-normal">
-            4 Langkah Praktis Nikmati Home Spa
-          </h2>
-          <p className="text-[#5c4336] text-xs sm:text-sm font-light">
-            Cukup pesan via WhatsApp, terapis profesional kami siap datang langsung ke lokasi Anda.
-          </p>
+          <div>
+            <span className="text-xs uppercase tracking-widest text-[#5a3d30] font-semibold block">Proses Mudah</span>
+            <span className="text-[10px] uppercase tracking-wider text-[#8c664d] font-medium block">Easy Booking Process</span>
+          </div>
+
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-serif text-[#2b1c15] font-normal">
+              4 Langkah Praktis Nikmati Home Spa
+            </h2>
+            <p className="text-sm font-serif italic text-[#8c664d] font-normal">
+              4 Easy Steps to Enjoy Home Spa
+            </p>
+          </div>
+
+          <div className="space-y-1 pt-1">
+            <p className="text-[#5c4336] text-xs sm:text-sm font-light">
+              Cukup pesan via WhatsApp, terapis profesional kami siap datang langsung ke lokasi Anda.
+            </p>
+            <p className="text-[#8c664d] text-xs font-light italic">
+              Simply book via WhatsApp, our professional therapist will arrive directly at your location.
+            </p>
+          </div>
         </div>
 
         {/* Steps Grid */}
@@ -36,17 +51,28 @@ export default function BookingFlowSection({ onOpenBooking }) {
                   </div>
                 </div>
 
-                <h3 className="text-sm font-serif font-semibold text-[#2b1c15] uppercase tracking-wider mb-2">
+                <h3 className="text-sm font-serif font-semibold text-[#2b1c15] uppercase tracking-wider mb-0.5">
                   {step.title}
                 </h3>
+                <span className="text-[10px] font-medium text-[#8c664d] uppercase tracking-wider block mb-2">
+                  {step.titleEn}
+                </span>
 
-                <p className="text-xs text-[#5c4336] leading-relaxed font-light">
-                  {step.description}
-                </p>
+                <div className="space-y-2">
+                  <p className="text-xs text-[#5c4336] leading-relaxed font-light">
+                    {step.description}
+                  </p>
+                  <p className="text-[11px] text-[#8c664d] leading-relaxed font-light italic pt-2 border-t border-stone-100">
+                    {step.descriptionEn}
+                  </p>
+                </div>
               </div>
 
               <div className="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-[11px] text-[#5a3d30] font-medium">
-                <span>Langkah {idx + 1}</span>
+                <div>
+                  <span className="block font-semibold">Langkah {idx + 1}</span>
+                  <span className="text-[9px] text-[#8c664d] font-normal block">Step {idx + 1}</span>
+                </div>
                 <CheckCircle className="w-4 h-4 text-[#5a3d30]" />
               </div>
             </div>
@@ -57,10 +83,13 @@ export default function BookingFlowSection({ onOpenBooking }) {
         <div className="mt-14 text-center">
           <button
             onClick={onOpenBooking}
-            className="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-[#5a3d30] hover:bg-[#3c281e] text-[#f8f4ee] font-bold text-xs tracking-wider uppercase transition-all duration-300 shadow-md"
+            className="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-[#5a3d30] hover:bg-[#3c281e] text-[#f8f4ee] font-bold transition-all duration-300 shadow-md group"
           >
-            <MessageSquare className="w-4 h-4" />
-            <span>Pesan Home Spa Sekarang</span>
+            <MessageSquare className="w-4 h-4 text-[#f8f4ee]" />
+            <div className="flex flex-col items-center leading-tight">
+              <span className="text-xs tracking-wider uppercase">Pesan Home Spa Sekarang</span>
+              <span className="text-[10px] font-normal lowercase tracking-normal opacity-85">Book Home Spa Now</span>
+            </div>
           </button>
         </div>
 
@@ -68,3 +97,4 @@ export default function BookingFlowSection({ onOpenBooking }) {
     </section>
   );
 }
+

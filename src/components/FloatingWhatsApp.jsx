@@ -1,6 +1,6 @@
 'use client';
 
-import { createWhatsAppUrl, SPA_CONFIG } from '../data/spaData';
+import { createWhatsAppUrl } from '../data/spaData';
 
 export default function FloatingWhatsApp() {
   const waUrl = createWhatsAppUrl();
@@ -31,10 +31,12 @@ export default function FloatingWhatsApp() {
         </svg>
 
         {/* Hover Tooltip */}
-        <span className="absolute right-16 top-1/2 -translate-y-1/2 whitespace-nowrap bg-[#1c2420] text-white text-xs font-medium px-3.5 py-2 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl border border-stone-700">
-          Chat WhatsApp Aquarius Spa
-        </span>
+        <div className="absolute right-16 top-1/2 -translate-y-1/2 whitespace-nowrap bg-[#1c2420] text-white text-xs font-medium px-3.5 py-2 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl border border-stone-700 flex flex-col items-start leading-tight">
+          <span>Chat WhatsApp Aquarius Spa</span>
+          <span className="text-[10px] font-normal text-emerald-400">WhatsApp Chat Service</span>
+        </div>
       </a>
     </div>
   );
 }
+

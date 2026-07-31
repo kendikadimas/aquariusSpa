@@ -58,15 +58,21 @@ export default function BookingModal({ isOpen, onClose, defaultService = null })
 
         {/* Header */}
         <div className="text-center mb-6">
-          <span className="text-xs uppercase tracking-widest text-[#6b5e4c] font-semibold">Reservasi Home Spa</span>
+          <span className="text-xs uppercase tracking-widest text-[#6b5e4c] font-semibold block">Reservasi Home Spa</span>
+          <span className="text-[10px] uppercase tracking-wider text-[#8c664d] font-medium block">Home Spa Reservation</span>
           <h3 className="text-2xl sm:text-3xl font-serif text-[#2c251e] font-normal mt-1">Form Pemesanan</h3>
+          <p className="text-xs font-serif italic text-[#8c664d]">Booking Form</p>
           <p className="text-xs text-[#5c4336] mt-1 font-light">Layanan Pijat Panggilan Langsung ke Tempat Anda</p>
+          <p className="text-[10px] text-[#8c664d] font-light italic">On-Demand Massage Service Delivered to Your Location</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
           {/* Service Selection */}
           <div>
-            <label className="block text-xs uppercase tracking-wider text-[#6b5e4c] font-semibold mb-2">Pilih Layanan</label>
+            <label className="block text-xs uppercase tracking-wider text-[#6b5e4c] font-semibold mb-1">
+              <span>Pilih Layanan</span>
+              <span className="text-[10px] font-normal text-[#8c664d] block lowercase tracking-normal">Select Service</span>
+            </label>
             <select
               value={selectedService}
               onChange={(e) => setSelectedService(e.target.value)}
@@ -80,31 +86,34 @@ export default function BookingModal({ isOpen, onClose, defaultService = null })
 
           {/* Duration Selection */}
           <div>
-            <label className="block text-xs uppercase tracking-wider text-[#6b5e4c] font-semibold mb-2">Pilih Durasi Utama</label>
+            <label className="block text-xs uppercase tracking-wider text-[#6b5e4c] font-semibold mb-2">
+              <span>Pilih Durasi Utama</span>
+              <span className="text-[10px] font-normal text-[#8c664d] block lowercase tracking-normal">Select Main Duration</span>
+            </label>
             <div className="grid grid-cols-2 gap-3">
               <button
                 type="button"
                 onClick={() => setSelectedDuration('90 MENIT (Rp300.000)')}
-                className={`py-3 px-4 rounded-2xl border text-xs font-semibold transition-all flex flex-col items-center justify-center gap-1 ${
+                className={`py-3 px-4 rounded-2xl border text-xs font-semibold transition-all flex flex-col items-center justify-center gap-0.5 ${
                   selectedDuration.includes('90')
                     ? 'bg-[#6b5e4c] border-[#6b5e4c] text-white shadow-sm font-bold'
                     : 'bg-[#f8f4ee] border-[#e8ded3] text-[#5c4336] hover:border-stone-300'
                 }`}
               >
-                <span>90 MENIT</span>
+                <span>90 MENIT (90 Mins)</span>
                 <span className={selectedDuration.includes('90') ? 'text-stone-200' : 'text-[#2c251e]'}>Rp 300.000</span>
               </button>
 
               <button
                 type="button"
                 onClick={() => setSelectedDuration('120 MENIT (Rp400.000)')}
-                className={`py-3 px-4 rounded-2xl border text-xs font-semibold transition-all flex flex-col items-center justify-center gap-1 ${
+                className={`py-3 px-4 rounded-2xl border text-xs font-semibold transition-all flex flex-col items-center justify-center gap-0.5 ${
                   selectedDuration.includes('120')
                     ? 'bg-[#6b5e4c] border-[#6b5e4c] text-white shadow-sm font-bold'
                     : 'bg-[#f8f4ee] border-[#e8ded3] text-[#5c4336] hover:border-stone-300'
                 }`}
               >
-                <span>120 MENIT</span>
+                <span>120 MENIT (120 Mins)</span>
                 <span className={selectedDuration.includes('120') ? 'text-stone-200' : 'text-[#2c251e]'}>Rp 400.000</span>
               </button>
             </div>
@@ -117,14 +126,18 @@ export default function BookingModal({ isOpen, onClose, defaultService = null })
                 type="checkbox"
                 checked={includeExtended}
                 onChange={(e) => setIncludeExtended(e.target.checked)}
-                className="mt-1 w-4 h-4 accent-[#6b5e4c] rounded cursor-pointer"
+                className="mt-1 w-4 h-4 accent-[#6b5e4c] rounded cursor-pointer shrink-0"
               />
               <div className="flex-1">
                 <div className="flex items-center justify-between">
-                  <span className="font-semibold text-[#2c251e] text-xs">Tambahkan Extended Time (+30 Menit)</span>
+                  <div>
+                    <span className="font-semibold text-[#2c251e] text-xs block">Tambahkan Extended Time (+30 Menit)</span>
+                    <span className="text-[10px] text-[#8c664d] block font-light">Add Extended Time (+30 Mins)</span>
+                  </div>
                   <span className="text-[11px] font-bold text-[#6b5e4c] bg-white px-2.5 py-0.5 rounded-full border border-[#e8ded3]">+ Rp100.000</span>
                 </div>
-                <p className="text-[11px] text-[#5c4336] mt-0.5 font-light">Tambah 30 menit durasi pijat ekstra untuk relaksasi lebih maksimal.</p>
+                <p className="text-[11px] text-[#5c4336] mt-1 font-light">Tambah 30 menit durasi pijat ekstra untuk relaksasi lebih maksimal.</p>
+                <p className="text-[10px] text-[#8c664d] font-light italic">Add 30 minutes extra massage duration for maximum relaxation.</p>
               </div>
             </label>
           </div>
@@ -132,12 +145,15 @@ export default function BookingModal({ isOpen, onClose, defaultService = null })
           {/* Customer Details */}
           <div className="space-y-3">
             <div>
-              <label className="block text-xs text-[#5c4336] mb-1">Nama Pemesan</label>
+              <label className="block text-xs text-[#5c4336] mb-1">
+                <span className="font-medium text-[#2c251e]">Nama Pemesan</span>
+                <span className="text-[10px] text-[#8c664d] italic ml-1">(Booker Name)</span>
+              </label>
               <div className="relative">
                 <User className="absolute left-3 top-3 w-4 h-4 text-stone-400" />
                 <input
                   type="text"
-                  placeholder="Contoh: Ibu Rina / Pak Budi"
+                  placeholder="Contoh: Ibu Rina / Pak Budi (e.g. Mrs. Rina / Mr. Budi)"
                   value={customerName}
                   onChange={(e) => setCustomerName(e.target.value)}
                   className="w-full bg-[#f8f4ee] border border-[#e8ded3] rounded-2xl pl-10 pr-4 py-2.5 text-xs text-[#2c251e] focus:outline-none focus:border-[#6b5e4c]"
@@ -146,7 +162,10 @@ export default function BookingModal({ isOpen, onClose, defaultService = null })
             </div>
 
             <div>
-              <label className="block text-xs text-[#5c4336] mb-1">Alamat / Area Lokasi Panggilan</label>
+              <label className="block text-xs text-[#5c4336] mb-1">
+                <span className="font-medium text-[#2c251e]">Alamat / Area Lokasi Panggilan</span>
+                <span className="text-[10px] text-[#8c664d] italic ml-1">(Address / Service Location)</span>
+              </label>
               <div className="relative">
                 <MapPin className="absolute left-3 top-3 w-4 h-4 text-stone-400" />
                 <input
@@ -163,13 +182,17 @@ export default function BookingModal({ isOpen, onClose, defaultService = null })
           {/* Action Button */}
           <button
             type="submit"
-            className="w-full mt-2 py-3.5 px-6 rounded-full bg-[#6b5e4c] hover:bg-[#524637] text-white font-bold text-xs tracking-wider uppercase transition-all flex items-center justify-center gap-2 shadow-md"
+            className="w-full mt-2 py-3 px-6 rounded-full bg-[#6b5e4c] hover:bg-[#524637] text-white font-bold transition-all flex items-center justify-center gap-2 shadow-md"
           >
-            <MessageSquare className="w-4 h-4 text-white" />
-            <span>Kirim Pesanan via WhatsApp</span>
+            <MessageSquare className="w-4 h-4 text-white shrink-0" />
+            <div className="flex flex-col items-center leading-tight">
+              <span className="text-xs font-bold tracking-wider uppercase">Kirim Pesanan via WhatsApp</span>
+              <span className="text-[10px] font-normal lowercase tracking-normal opacity-85">Send Order via WhatsApp</span>
+            </div>
           </button>
         </form>
       </div>
     </div>
   );
 }
+

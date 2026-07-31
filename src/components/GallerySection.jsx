@@ -14,13 +14,28 @@ export default function GallerySection() {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-2">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#c49a6c] font-semibold">Visual Sanctuary</span>
-          <h2 className="text-3xl sm:text-5xl font-serif text-white font-normal">
-            Suasana & Teknik Terapi Spa
-          </h2>
-          <p className="text-[#c7b7aa] text-xs sm:text-sm font-light">
-            Sentuhan kehangatan, aroma terapi alami, dan kenyamanan terapi profesional untuk jiwa dan raga.
-          </p>
+          <div>
+            <span className="text-xs uppercase tracking-[0.25em] text-[#c49a6c] font-semibold block">Galeri Visual</span>
+            <span className="text-[10px] uppercase tracking-wider text-[#c7b7aa] font-medium block">Visual Sanctuary</span>
+          </div>
+
+          <div>
+            <h2 className="text-3xl sm:text-5xl font-serif text-white font-normal">
+              Suasana & Teknik Terapi Spa
+            </h2>
+            <p className="text-base font-serif italic text-[#c49a6c] font-normal">
+              Spa Atmosphere & Therapy Techniques
+            </p>
+          </div>
+
+          <div className="space-y-1 pt-1">
+            <p className="text-[#c7b7aa] text-xs sm:text-sm font-light">
+              Sentuhan kehangatan, aroma terapi alami, dan kenyamanan terapi profesional untuk jiwa dan raga.
+            </p>
+            <p className="text-[#a8988a] text-xs font-light italic">
+              Warm touch, natural aromatherapy, and professional care for body and soul.
+            </p>
+          </div>
         </div>
 
         {/* 6 Photo Grid Showcase */}
@@ -47,6 +62,11 @@ export default function GallerySection() {
                   <h3 className="text-sm font-serif font-semibold text-white mt-1.5">
                     {item.title}
                   </h3>
+                  {item.titleEn && (
+                    <span className="text-[10px] font-serif italic text-[#c49a6c] block">
+                      {item.titleEn}
+                    </span>
+                  )}
                 </div>
 
                 <div className="w-9 h-9 rounded-full bg-[#1a120c]/80 backdrop-blur-md border border-[#c49a6c]/40 flex items-center justify-center text-[#c49a6c] group-hover:bg-[#c49a6c] group-hover:text-[#140c08] transition-colors shadow-sm">
@@ -60,7 +80,8 @@ export default function GallerySection() {
         {/* Bottom 4-Photo Treatment Photography Strip */}
         <div className="pt-6 border-t border-[#35271e]">
           <div className="text-center mb-8">
-            <span className="text-xs uppercase tracking-widest text-[#c49a6c] font-semibold">Gallery Highlights</span>
+            <span className="text-xs uppercase tracking-widest text-[#c49a6c] font-semibold block">Momen Terapi</span>
+            <span className="text-[10px] uppercase tracking-wider text-[#c7b7aa] font-medium block">Gallery Highlights</span>
             <h3 className="text-xl font-serif text-white mt-1 font-medium">Experiential Spa Therapy Moments</h3>
           </div>
 
@@ -79,13 +100,13 @@ export default function GallerySection() {
 
             <div className="relative h-44 rounded-2xl overflow-hidden border border-[#8c664d]/40 shadow-sm group">
               <Image
-                src="/images/hot_stone_reflexology.png"
-                alt="Hot Stone Placement"
+                src="/images/reflexology_body_spa.png"
+                alt="Reflexology Foot Care"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute bottom-2 left-2 right-2 bg-[#1a120c]/90 backdrop-blur-sm p-2 rounded-xl text-center border border-[#8c664d]/30">
-                <span className="text-[11px] font-medium text-white block">Hot Stone Therapy</span>
+                <span className="text-[11px] font-medium text-white block">Reflexology & Foot Care</span>
               </div>
             </div>
 
@@ -145,6 +166,9 @@ export default function GallerySection() {
             <div className="p-5 bg-[#251b14] text-center border-t border-[#35271e]">
               <span className="text-xs uppercase tracking-widest text-[#c49a6c] font-medium">{selectedImage.category}</span>
               <h3 className="text-xl font-serif font-semibold text-white mt-1">{selectedImage.title}</h3>
+              {selectedImage.titleEn && (
+                <p className="text-sm font-serif italic text-[#c49a6c]">{selectedImage.titleEn}</p>
+              )}
             </div>
           </div>
         </div>
@@ -152,3 +176,4 @@ export default function GallerySection() {
     </section>
   );
 }
+

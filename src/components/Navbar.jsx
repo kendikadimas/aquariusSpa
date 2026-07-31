@@ -17,32 +17,32 @@ export default function Navbar({ onOpenBooking }) {
   }, []);
 
   const desktopNavLinks = [
-    { name: 'BERANDA', href: '#hero' },
-    { name: 'TENTANG KAMI', href: '#about' },
-    { name: 'LAYANAN', href: '#services' },
-    { name: 'GALERI', href: '#gallery' },
-    { name: 'KONTAK', href: '#contact' },
+    { name: 'HOME', href: '#hero' },
+    { name: 'ABOUT US', href: '#about' },
+    { name: 'SERVICES', href: '#services' },
+    { name: 'GALLERY', href: '#gallery' },
+    { name: 'CONTACT', href: '#contact' },
   ];
 
   const mobileNavGroups = [
-    { name: 'BERANDA', href: '#hero' },
+    { name: 'HOME', href: '#hero' },
     {
-      name: 'LAYANAN & CARA PESAN',
+      name: 'SERVICES & BOOKING FLOW',
       subItems: [
-        { name: 'Layanan & Paket Spa', href: '#services' },
-        { name: 'Cara Pemesanan', href: '#flow' },
+        { name: 'Services & Spa Packages', href: '#services' },
+        { name: 'How to Order', href: '#flow' },
       ],
     },
     {
-      name: 'TENTANG & INFORMASI',
+      name: 'ABOUT & INFORMATION',
       subItems: [
-        { name: 'Tentang Kami', href: '#about' },
-        { name: 'Keunggulan Kami', href: '#features' },
-        { name: 'Galeri Visual', href: '#gallery' },
-        { name: 'Testimoni & Area Layanan', href: '#testimonials' },
+        { name: 'About Us', href: '#about' },
+        { name: 'Our Features', href: '#features' },
+        { name: 'Visual Gallery', href: '#gallery' },
+        { name: 'Testimonials & Service Area', href: '#testimonials' },
       ],
     },
-    { name: 'HUBUNGI KAMI', href: '#contact' },
+    { name: 'CONTACT US', href: '#contact' },
   ];
 
   return (
@@ -89,7 +89,7 @@ export default function Navbar({ onOpenBooking }) {
               className="px-6 py-2.5 rounded-full font-bold text-[11px] tracking-[0.18em] uppercase transition-all duration-300 shadow-md flex items-center gap-2 bg-[#c49a6c] hover:bg-[#b0875b] text-[#1c120c] hover:scale-[1.02] active:scale-95"
             >
               <Calendar className="w-3.5 h-3.5 text-[#1c120c]" />
-              <span>RESERVASI</span>
+              <span>BOOK NOW</span>
             </button>
           </div>
 
@@ -167,7 +167,7 @@ export default function Navbar({ onOpenBooking }) {
               className="w-full py-3.5 rounded-full bg-[#c49a6c] text-[#1c120c] font-bold text-xs tracking-[0.2em] uppercase text-center shadow-md flex items-center justify-center gap-2 hover:bg-[#b0875b] transition-colors mt-2"
             >
               <Calendar className="w-4 h-4 text-[#1c120c]" />
-              <span>RESERVASI SEKARANG</span>
+              <span>BOOK NOW</span>
             </button>
           </div>
         )}
@@ -175,3 +175,5 @@ export default function Navbar({ onOpenBooking }) {
     </header>
   );
 }
+
+

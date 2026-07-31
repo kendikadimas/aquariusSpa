@@ -17,16 +17,33 @@ export default function ServicesSection({ onOpenBooking }) {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#5a3d30] font-semibold">
-            Wellness Menu & Price List
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-serif text-[#2b1c15] font-normal tracking-tight">
-            Signature Treatments
-          </h2>
-          <p className="text-[#5c4336] text-sm font-light">
-            Pilihan terapi pijat terbaik untuk memulihkan kebugaran dan ketenangan pikiran Anda.
-          </p>
+        <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
+          <div>
+            <span className="text-xs uppercase tracking-[0.25em] text-[#5a3d30] font-semibold block">
+              MENU LAYANAN & DAFTAR HARGA
+            </span>
+            <span className="text-[10px] uppercase tracking-wider text-[#8c664d] font-medium block">
+              WELLNESS MENU & PRICE LIST
+            </span>
+          </div>
+
+          <div>
+            <h2 className="text-3xl sm:text-5xl font-serif text-[#2b1c15] font-normal tracking-tight">
+              Layanan Unggulan
+            </h2>
+            <p className="text-base font-serif italic text-[#8c664d] font-normal">
+              Signature Treatments
+            </p>
+          </div>
+
+          <div className="space-y-1 pt-1">
+            <p className="text-[#5c4336] text-sm font-light">
+              Pilihan terapi pijat terbaik untuk memulihkan kebugaran dan ketenangan pikiran Anda.
+            </p>
+            <p className="text-[#8c664d] text-xs font-light italic">
+              Curated massage therapies to restore your vitality and peace of mind.
+            </p>
+          </div>
         </div>
 
         {/* 4 Treatments Cards Grid */}
@@ -51,8 +68,8 @@ export default function ServicesSection({ onOpenBooking }) {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#2b1c15]/50 via-transparent to-transparent opacity-60" />
                     
                     {/* Badge */}
-                    <span className="absolute top-3 right-3 text-[10px] font-medium tracking-wider bg-white/90 text-[#2b1c15] px-2.5 py-1 rounded-full backdrop-blur-md border border-white/40 shadow-sm">
-                      {service.badge}
+                    <span className="absolute top-3 right-3 text-[10px] font-medium tracking-wider bg-white/90 text-[#2b1c15] px-2.5 py-1 rounded-full backdrop-blur-md border border-white/40 shadow-sm flex flex-col items-center leading-none">
+                      <span>{service.badge}</span>
                     </span>
 
                     {/* Icon Emblem Overlay */}
@@ -96,13 +113,16 @@ export default function ServicesSection({ onOpenBooking }) {
                     ))}
                   </div>
 
-                  {/* Chocolate Reserve Button */}
+                  {/* Reserve Button */}
                   <button
                     onClick={() => onOpenBooking(service)}
-                    className="w-full py-3 rounded-full bg-[#5a3d30] hover:bg-[#3c281e] text-[#f8f4ee] text-xs font-semibold tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
+                    className="w-full py-2.5 rounded-full bg-[#5a3d30] hover:bg-[#3c281e] text-[#f8f4ee] transition-all duration-300 flex items-center justify-center gap-2 shadow-sm group/btn"
                   >
-                    <span>Pesan Layanan</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <div className="flex flex-col items-center leading-tight">
+                      <span className="text-xs font-semibold tracking-wider uppercase">Pesan Layanan</span>
+                      <span className="text-[9px] font-normal lowercase tracking-normal opacity-80">Book Service</span>
+                    </div>
+                    <ArrowRight className="w-3.5 h-3.5 ml-1 transition-transform group-hover/btn:translate-x-1" />
                   </button>
                 </div>
               </div>
@@ -117,8 +137,9 @@ export default function ServicesSection({ onOpenBooking }) {
               <Plus className="w-6 h-6" />
             </div>
             <div>
-              <span className="text-xs uppercase tracking-widest text-[#5a3d30] font-semibold">Opsi Tambahan Waktu</span>
-              <h3 className="text-xl font-serif font-medium text-[#2b1c15]">{EXTENDED_OPTION.title}</h3>
+              <span className="text-xs uppercase tracking-widest text-[#5a3d30] font-semibold block">Opsi Tambahan Waktu</span>
+              <span className="text-[10px] uppercase tracking-wider text-[#8c664d] font-medium block">Extended Time Add-On</span>
+              <h3 className="text-xl font-serif font-medium text-[#2b1c15] mt-1">{EXTENDED_OPTION.title}</h3>
               <p className="text-xs text-[#5c4336] mt-0.5 max-w-xl font-light">
                 {EXTENDED_OPTION.description}
               </p>
@@ -131,11 +152,13 @@ export default function ServicesSection({ onOpenBooking }) {
           <div className="flex items-center gap-4 bg-white px-6 py-3.5 rounded-2xl border border-stone-200 shrink-0">
             <div>
               <span className="text-[10px] text-[#5c4336] uppercase tracking-wider block">Durasi Ekstra</span>
+              <span className="text-[9px] text-[#8c664d] block font-light">Extra Duration</span>
               <span className="text-sm font-bold text-[#2b1c15]">{EXTENDED_OPTION.duration}</span>
             </div>
             <div className="h-6 w-px bg-stone-300"></div>
             <div>
               <span className="text-[10px] text-[#5c4336] uppercase tracking-wider block">Biaya Extended</span>
+              <span className="text-[9px] text-[#8c664d] block font-light">Extended Fee</span>
               <span className="text-lg font-bold text-[#5a3d30]">{EXTENDED_OPTION.price}</span>
             </div>
           </div>
@@ -145,3 +168,4 @@ export default function ServicesSection({ onOpenBooking }) {
     </section>
   );
 }
+

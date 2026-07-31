@@ -1,6 +1,6 @@
 'use client';
 
-import { Star, MapPin, Clock, Quote, Building2, Sparkles } from 'lucide-react';
+import { Star, MapPin, Clock, Building2 } from 'lucide-react';
 import { TESTIMONIALS, SPA_CONFIG } from '../data/spaData';
 
 export default function TestimonialsAreaSection() {
@@ -10,13 +10,28 @@ export default function TestimonialsAreaSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
-          <span className="text-xs uppercase tracking-widest text-[#5a3d30] font-semibold">Informasi & Ulasan</span>
-          <h2 className="text-3xl sm:text-4xl font-serif text-[#2b1c15] font-normal">
-            Area Layanan & Testimoni Pelanggan
-          </h2>
-          <p className="text-[#5c4336] text-xs sm:text-sm font-light">
-            Pengalaman nyata relaksasi pelanggan Aquarius Spa.
-          </p>
+          <div>
+            <span className="text-xs uppercase tracking-widest text-[#5a3d30] font-semibold block">Informasi & Ulasan</span>
+            <span className="text-[10px] uppercase tracking-wider text-[#8c664d] font-medium block">Information & Reviews</span>
+          </div>
+
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-serif text-[#2b1c15] font-normal">
+              Area Layanan & Testimoni Pelanggan
+            </h2>
+            <p className="text-sm font-serif italic text-[#8c664d] font-normal">
+              Service Areas & Customer Reviews
+            </p>
+          </div>
+
+          <div className="space-y-1 pt-1">
+            <p className="text-[#5c4336] text-xs sm:text-sm font-light">
+              Pengalaman nyata relaksasi pelanggan Aquarius Spa.
+            </p>
+            <p className="text-[#8c664d] text-xs font-light italic">
+              Real relaxation experiences from Aquarius Spa guests.
+            </p>
+          </div>
         </div>
 
         {/* Testimonials Floating Cards Row */}
@@ -61,14 +76,20 @@ export default function TestimonialsAreaSection() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase tracking-widest text-[#5a3d30] font-semibold">Cakupan Wilayah</span>
+                  <span className="text-[10px] uppercase tracking-widest text-[#5a3d30] font-semibold block">Cakupan Wilayah</span>
+                  <span className="text-[9px] uppercase tracking-wider text-[#8c664d] font-medium block">Coverage Area</span>
                   <h3 className="text-lg font-serif font-semibold text-[#2b1c15] uppercase">AREA LAYANAN</h3>
                 </div>
               </div>
 
-              <p className="text-xs text-[#5c4336] font-light leading-relaxed">
-                Terapis profesional kami siap melayani panggilan ke Rumah, Hotel, & Apartemen di area:
-              </p>
+              <div className="space-y-1">
+                <p className="text-xs text-[#5c4336] font-light leading-relaxed">
+                  Terapis profesional kami siap melayani panggilan ke Rumah, Hotel, & Apartemen di area:
+                </p>
+                <p className="text-[11px] text-[#8c664d] font-light italic leading-relaxed">
+                  Our professional therapists are ready for home, hotel, & apartment calls in:
+                </p>
+              </div>
 
               <div className="flex flex-wrap gap-2 pt-1">
                 {SPA_CONFIG.serviceAreas.map((area, idx) => (
@@ -84,7 +105,8 @@ export default function TestimonialsAreaSection() {
             </div>
 
             <div className="mt-6 pt-4 border-t border-stone-100 text-center">
-              <span className="text-xs font-mono tracking-widest text-[#5a3d30]">JAKARTA • TANGERANG • BEKASI</span>
+              <span className="text-xs font-mono tracking-widest text-[#5a3d30] block">JAKARTA • TANGERANG • BEKASI • DEPOK</span>
+              <span className="text-[10px] font-mono tracking-wider text-[#8c664d] block">GREATER JAKARTA METROPOLITAN AREA</span>
             </div>
           </div>
 
@@ -96,17 +118,27 @@ export default function TestimonialsAreaSection() {
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase tracking-widest text-[#5a3d30] font-semibold">Waktu Operasional</span>
+                  <span className="text-[10px] uppercase tracking-widest text-[#5a3d30] font-semibold block">Waktu Operasional</span>
+                  <span className="text-[9px] uppercase tracking-wider text-[#8c664d] font-medium block">Operating Hours</span>
                   <h3 className="text-lg font-serif font-semibold text-[#2b1c15] uppercase">JAM OPERASIONAL</h3>
                 </div>
               </div>
 
-              <div className="text-center py-6 bg-[#f0e8df] rounded-2xl border border-[#e8ded3] space-y-1">
+              <div className="text-center py-5 bg-[#f0e8df] rounded-2xl border border-[#e8ded3] space-y-1">
                 <span className="text-xs font-semibold uppercase tracking-widest text-[#5a3d30] block">Buka Setiap Hari</span>
-                <span className="text-2xl font-serif font-bold text-[#2b1c15] block">
-                  10.00 - 23.00 WIB
+                <span className="text-[10px] font-medium uppercase tracking-wider text-[#8c664d] block">Open Everyday</span>
+                
+                <span className="text-2xl font-serif font-bold text-[#2b1c15] block pt-1">
+                  10.00 - 00.00 WIB
                 </span>
-                <span className="text-xs text-[#5c4336] block font-light">Reservasi Fast Response via WhatsApp</span>
+                <span className="text-xs text-[#8c664d] font-medium block italic">
+                  10:00 AM - 12:00 AM (Midnight)
+                </span>
+
+                <div className="pt-2">
+                  <span className="text-xs text-[#5c4336] block font-light">Reservasi Fast Response via WhatsApp</span>
+                  <span className="text-[10px] text-[#8c664d] block font-light italic">Fast Response Booking via WhatsApp</span>
+                </div>
               </div>
             </div>
 
@@ -119,3 +151,4 @@ export default function TestimonialsAreaSection() {
     </section>
   );
 }
+
