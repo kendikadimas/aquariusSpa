@@ -56,10 +56,10 @@ export default function AboutSection() {
 
             <div className="space-y-2">
               <p className="text-base text-[#5c4336] font-light leading-relaxed">
-                <strong className="text-[#2b1c15] font-medium">{SPA_CONFIG.name}</strong> menghadirkan keharmonisan relaksasi tubuh dan keheningan pikiran. Kami hadir khusus untuk memberikan perawatan pijat profesional berkualitas spa kelas atas langsung di kediaman, hotel, maupun apartemen Anda.
+                <strong className="text-[#2b1c15] font-medium">{SPA_CONFIG.name}</strong> menghadirkan keharmonisan relaksasi tubuh dan keheningan pikiran. Kami hadir khusus untuk memberikan perawatan pijat profesional berkualitas spa kelas atas langsung di hotel maupun apartemen Anda di Jakarta & Depok.
               </p>
               <p className="text-xs text-[#8c664d] italic font-light leading-relaxed pt-1 border-t border-[#e8ded3]/70">
-                <strong className="font-medium">{SPA_CONFIG.name}</strong> brings harmony to body relaxation and peace of mind. We provide high-end professional spa massage treatments directly to your residence, hotel, or apartment.
+                <strong className="font-medium">{SPA_CONFIG.name}</strong> brings harmony to body relaxation and peace of mind. We provide high-end professional spa massage treatments directly to your hotel or apartment in Jakarta & Depok.
               </p>
             </div>
 
@@ -97,8 +97,8 @@ export default function AboutSection() {
               <div className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#5a3d30] shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-[#2b1c15] font-medium block">Jakarta • Tangerang • Bekasi • Depok</span>
-                  <span className="text-[10px] text-[#8c664d] italic block">Service Areas: Jabodetabek</span>
+                  <span className="text-[#2b1c15] font-medium block">Jakarta • Depok</span>
+                  <span className="text-[10px] text-[#8c664d] italic block">Service Areas: Jakarta & Depok</span>
                 </div>
               </div>
             </div>

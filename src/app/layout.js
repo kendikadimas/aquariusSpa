@@ -2,15 +2,20 @@ import './globals.css';
 import Script from 'next/script';
 
 const siteName = 'Aquarius Massage Home Spa';
-const siteDescription = 'Aquarius Massage Home Spa menyediakan pijat panggilan ke rumah, hotel, apartemen, dan lokasi Anda di Jakarta, Tangerang, Bekasi, Depok, BSD, dan Serpong. Pilih Traditional Massage, Relaxing Massage, Aromatherapy Massage, atau Reflexology & Body Spa dengan terapis wanita berpengalaman dan privasi terjaga.';
+const siteDescription = 'Aquarius Massage Home Spa menyediakan pijat panggilan ke hotel dan apartemen di Jakarta dan Depok. Pilih Traditional Massage, Relaxing Massage, Aromatherapy Massage, atau Reflexology & Body Spa dengan terapis wanita berpengalaman dan privasi terjaga.';
 const siteKeywords = [
   'aquarius massage home spa',
   'aquarius spa',
   'pijat panggilan jakarta',
-  'home spa jakarta',
-  'pijat panggilan tangerang',
-  'pijat panggilan bekasi',
   'pijat panggilan depok',
+  'home spa jakarta',
+  'home spa depok',
+  'pijat hotel jakarta',
+  'pijat apartemen jakarta',
+  'pijat hotel depok',
+  'pijat apartemen depok',
+  'massage hotel jakarta',
+  'massage apartemen depok',
   'pijat hotel',
   'pijat apartemen',
   'massage home spa',
@@ -28,7 +33,12 @@ const structuredData = {
   name: siteName,
   description: siteDescription,
   telephone: '0813-1188-515',
-  areaServed: ['Jakarta', 'Tangerang', 'Bekasi', 'Depok', 'BSD', 'Serpong'],
+  areaServed: ['Jakarta', 'Depok'],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Jakarta',
+    addressCountry: 'ID',
+  },
   openingHours: 'Mo-Su 10:00-00:00',
   priceRange: 'Rp300.000 - Rp400.000',
   serviceType: ['Traditional Massage', 'Relaxing Massage', 'Aromatherapy Massage', 'Reflexology & Body Spa'],
@@ -39,7 +49,7 @@ export const metadata = {
   applicationName: siteName,
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aquariushomespa.com'),
   title: {
-    default: 'Aquarius Massage Home Spa | Pijat Panggilan Jakarta, Tangerang & Bekasi',
+    default: 'Aquarius Massage Home Spa | Pijat Panggilan Hotel & Apartemen Jakarta & Depok',
     template: `%s | ${siteName}`,
   },
   description: siteDescription,
@@ -60,7 +70,7 @@ export const metadata = {
     apple: '/apple-icon.png',
   },
   openGraph: {
-    title: 'Aquarius Massage Home Spa | Pijat Panggilan Jakarta, Tangerang & Bekasi',
+    title: 'Aquarius Massage Home Spa | Pijat Panggilan Hotel & Apartemen Jakarta & Depok',
     description: siteDescription,
     type: 'website',
     locale: 'id_ID',
@@ -76,7 +86,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aquarius Massage Home Spa | Pijat Panggilan Jakarta, Tangerang & Bekasi',
+    title: 'Aquarius Massage Home Spa | Pijat Panggilan Hotel & Apartemen Jakarta & Depok',
     description: siteDescription,
     images: ['/images/big-logo.png'],
   },

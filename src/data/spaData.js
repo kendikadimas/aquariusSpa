@@ -6,7 +6,7 @@ export const SPA_CONFIG = {
   phone: "0813-1188-515",
   whatsappNumber: "628131188515",
   operatingHours: "Setiap Hari | 10.00 - 00.00 WIB",
-  serviceAreas: ["Jakarta", "Tangerang", "Bekasi", "Depok", "BSD & Serpong"],
+  serviceAreas: ["Jakarta", "Depok"],
 };
 
 export const SERVICES = [
@@ -104,8 +104,8 @@ export const FEATURES = [
   {
     title: "LAYANAN PANGGILAN LOKASI",
     titleEn: "ON-DEMAND LOCATION SERVICE",
-    description: "Terapis siap datang langsung ke rumah, hotel, maupun apartemen Anda.",
-    descriptionEn: "Therapists ready to visit your home, hotel, or apartment directly.",
+    description: "Terapis siap datang langsung ke hotel maupun apartemen Anda di Jakarta & Depok.",
+    descriptionEn: "Therapists ready to visit your hotel or apartment in Jakarta & Depok.",
     icon: "MapPin"
   },
   {
@@ -136,8 +136,8 @@ export const STEPS = [
     step: "03",
     title: "KONFIRMASI LOKASI",
     titleEn: "CONFIRM LOCATION",
-    description: "Kirimkan alamat rumah, apartemen, atau hotel tempat Anda ingin mendapatkan layanan.",
-    descriptionEn: "Send your home, apartment, or hotel address for therapist visit."
+    description: "Kirimkan alamat apartemen atau hotel Anda di Jakarta & Depok.",
+    descriptionEn: "Send your apartment or hotel address in Jakarta & Depok."
   },
   {
     step: "04",
@@ -191,21 +191,21 @@ export const GALLERY_ITEMS = [
 export const TESTIMONIALS = [
   {
     name: "Rian",
-    location: "Jakarta South",
+    location: "Jakarta Selatan",
     rating: 5,
     comment: "Pelayanan sangat memuaskan, terapis ramah dan sangat profesional. Badan jadi jauh lebih segar dan nileks setelah aktivitas padat. Pasti akan pesan lagi!",
     service: "Traditional Massage 120 Menit"
   },
   {
     name: "Siska Maya",
-    location: "Tangerang",
+    location: "Jakarta Pusat",
     rating: 5,
     comment: "Sangat praktis terapis datang langsung ke apartemen. Pijatan minyak aromaterapinya bikin rileks banget, ketegangan di pundak langsung hilang.",
     service: "Aromatherapy Massage 90 Menit"
   },
   {
     name: "Hendra W.",
-    location: "Bekasi",
+    location: "Depok",
     rating: 5,
     comment: "Respon admin cepat lewat WA, terapis tepat waktu & sopan. Tambahan extended 30 menit benar-benar memuaskan!",
     service: "Relaxing Massage 120 Menit + Extended 30m"

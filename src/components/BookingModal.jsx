@@ -170,7 +170,7 @@ export default function BookingModal({ isOpen, onClose, defaultService = null })
                 <MapPin className="absolute left-3 top-3 w-4 h-4 text-stone-400" />
                 <input
                   type="text"
-                  placeholder="Contoh: Apartemen Mediterania / Hotel Grand / Rumah BSD"
+                  placeholder="Contoh: Apartemen Mediterania / Hotel Grand Indonesia"
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
                   className="w-full bg-[#f8f4ee] border border-[#e8ded3] rounded-2xl pl-10 pr-4 py-2.5 text-xs text-[#2c251e] focus:outline-none focus:border-[#6b5e4c]"

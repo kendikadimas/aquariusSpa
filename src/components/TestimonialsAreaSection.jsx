@@ -84,10 +84,10 @@ export default function TestimonialsAreaSection() {
 
               <div className="space-y-1">
                 <p className="text-xs text-[#5c4336] font-light leading-relaxed">
-                  Terapis profesional kami siap melayani panggilan ke Rumah, Hotel, & Apartemen di area:
+                  Terapis profesional kami siap melayani panggilan ke Hotel & Apartemen di area:
                 </p>
                 <p className="text-[11px] text-[#8c664d] font-light italic leading-relaxed">
-                  Our professional therapists are ready for home, hotel, & apartment calls in:
+                  Our professional therapists are ready for hotel & apartment calls in:
                 </p>
               </div>
 
@@ -105,8 +105,8 @@ export default function TestimonialsAreaSection() {
             </div>
 
             <div className="mt-6 pt-4 border-t border-stone-100 text-center">
-              <span className="text-xs font-mono tracking-widest text-[#5a3d30] block">JAKARTA • TANGERANG • BEKASI • DEPOK</span>
-              <span className="text-[10px] font-mono tracking-wider text-[#8c664d] block">GREATER JAKARTA METROPOLITAN AREA</span>
+              <span className="text-xs font-mono tracking-widest text-[#5a3d30] block">JAKARTA • DEPOK</span>
+              <span className="text-[10px] font-mono tracking-wider text-[#8c664d] block">JAKARTA & DEPOK SERVICE AREA</span>
             </div>
           </div>
 

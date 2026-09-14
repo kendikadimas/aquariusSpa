@@ -78,7 +78,7 @@ export default function FooterContactSection({ onOpenBooking }) {
                 <div className="w-7 h-7 rounded-full bg-[#251b14] border border-[#8c664d]/30 flex items-center justify-center shrink-0 mt-0.5">
                   <MapPin className="w-3.5 h-3.5 text-[#c49a6c]" />
                 </div>
-                <span>Jakarta, Tangerang, Bekasi, Depok</span>
+                <span>Jakarta & Depok</span>
               </div>
             </div>
           </div>
