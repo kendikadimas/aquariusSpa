@@ -1,6 +1,7 @@
 'use client';
 
 import { createWhatsAppUrl } from '../data/spaData';
+import { trackWhatsAppClick } from '../lib/tracking';
 
 export default function FloatingWhatsApp() {
   const waUrl = createWhatsAppUrl();
@@ -12,6 +13,7 @@ export default function FloatingWhatsApp() {
         href={waUrl}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={trackWhatsAppClick}
         aria-label="Chat WhatsApp Aquarius Spa"
         className="group relative flex items-center justify-center w-15 h-15 p-3.5 bg-[#25D366] hover:bg-[#20ba5a] rounded-full shadow-2xl shadow-emerald-950/50 transition-all transform hover:scale-110 active:scale-95 border-2 border-white"
       >
