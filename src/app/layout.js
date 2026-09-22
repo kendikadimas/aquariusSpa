@@ -48,6 +48,9 @@ const structuredData = {
 export const metadata = {
   applicationName: siteName,
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aquariushomespa.com'),
+  verification: {
+    google: '1kLyZJaTYqatOJUc8pQv_dM4c6j-mVkHssHoc0iZJOo',
+  },
   title: {
     default: 'Aquarius Massage Home Spa | Pijat Panggilan Hotel & Apartemen Jakarta & Depok',
     template: `%s | ${siteName}`,
